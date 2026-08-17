@@ -26,6 +26,24 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
 
+    /* Menu hamburger di HP */
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
+
     /* Sorot menu aktif berdasarkan posisi scroll */
     const sections = document.querySelectorAll('section[id]');
     const navAnchors = document.querySelectorAll('.nav-links a') || document.querySelectorAll('nav a');
@@ -43,5 +61,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', highlightMenu);
     highlightMenu();
+
+    /* Daftar harga CCTV (tab Dahua / HiLook) */
+    const priceData = {
+        dahua: [{ c: 2, p: 2200000 }, { c: 3, p: 2700000 }, { c: 4, p: 3200000 }, { c: 6, p: 4900000 }, { c: 8, p: 5900000 }],
+        hilook: [{ c: 2, p: 2100000 }, { c: 3, p: 2600000 }, { c: 4, p: 3100000 }, { c: 6, p: 4800000 }, { c: 8, p: 5800000 }]
+    };
+    const priceNames = { dahua: 'PAKET DAHUA', hilook: 'PAKET HILOOK' };
+    const priceList = document.getElementById('priceList');
+
+    function fmtRupiah(n) { return 'Rp ' + n.toLocaleString('id-ID'); }
+
+    function renderPrice(brand) {
+        if (!priceList) return;
+        priceList.innerHTML = priceData[brand].map(d => `
+            <div class="price-card">
+                <h3>${d.c} CAMERA</h3>
+                <div class="cam">${priceNames[brand]} · HD CCTV Package</div>
+                <div class="price">${fmtRupiah(d.p)}</div>
+                <div class="extra">Free Cable 10m &amp; Pemasangan Gratis</div>
+            </div>`).join('');
+    }
+
+    document.querySelectorAll('.price-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.price-tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            renderPrice(tab.dataset.brand);
+        });
+    });
+
+    if (priceList) renderPrice('dahua');
 
 });

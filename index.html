@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2T SECURITY CAMERA - Denpasar Bali</title>
+    <meta name="description" content="Jasa jual & pasang CCTV Hikvision, Dahua & HiLook bergaransi resmi untuk seluruh Bali. Teknisi berpengalaman, konsultasi gratis. Hubungi 0858-4749-8757.">
+    <meta property="og:title" content="2T SECURITY CAMERA - Denpasar Bali">
+    <meta property="og:description" content="Spesialis penjualan & pemasangan CCTV bergaransi resmi untuk seluruh Bali.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
         <div class="logo"><span>2T</span> SECURITY CAMERA</div>
-        <ul>
+        <ul id="navLinks">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#harga">Harga</a></li>
             <li><a href="#kontak">Kontak</a></li>
         </ul>
+        <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
 
     <section id="home" class="hero">
@@ -23,19 +30,48 @@
             <h1><b>2T SECURITY CAMERA</b><br>Keamanan Cepat &amp; Terpercaya</h1>
             <p>Spesialis penjualan &amp; pemasangan CCTV untuk <b>seluruh daerah Bali</b>.</p>
             <p>Brand resmi Hikvision, Dahua &amp; HiLook dengan garansi dan tim teknisi berpengalaman.</p>
-            <a class="btn" href="https://wa.me/62858487498757" target="_blank">📞 0858-4749-8757</a>
+            <div class="hero-btns">
+                <a class="btn" href="https://wa.me/6285847498757" target="_blank">📞 0858-4749-8757</a>
+                <a class="btn btn-price" href="#harga">💰 Lihat Pricelist Kamera</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="kenapa">
+        <h2>Kenapa Pilih <b>Kami</b></h2>
+        <p class="sub">Alasan pelanggan mempercayakan keamanan mereka ke 2T Security Camera</p>
+        <div class="cards">
+            <div class="card"><div class="ic">✅</div><h3>Garansi Resmi</h3><p>Semua produk bergaransi distributor resmi.</p></div>
+            <div class="card"><div class="ic">🧑‍🔧</div><h3>Teknisi Berpengalaman</h3><p>Pemasangan rapi &amp; sesuai standar.</p></div>
+            <div class="card"><div class="ic">⚡</div><h3>Respon Cepat</h3><p>Survei &amp; pemasangan cepat, tanpa lama nunggu.</p></div>
+            <div class="card"><div class="ic">💬</div><h3>Konsultasi Gratis</h3><p>Bantu pilih kamera sesuai kebutuhan &amp; budget.</p></div>
         </div>
     </section>
 
     <section id="layanan">
         <h2>Layanan <b>Kami</b></h2>
         <p class="sub">Solusi lengkap keamanan CCTV Anda</p>
+        <p class="price-link">
+            🔎 Ingin tahu harga lengkap kamera?
+            <a href="#harga">Lihat Pricelist Kamera di sini</a>
+        </p>
         <div class="cards">
             <div class="card"><div class="ic">📹</div><h3>Jual CCTV</h3><p>Hikvision, Dahua &amp; HiLook bergaransi resmi.</p></div>
             <div class="card"><div class="ic">🔧</div><h3>Pemasangan</h3><p>Instalasi cepat &amp; rapi oleh teknisi profesional.</p></div>
             <div class="card"><div class="ic">🛡</div><h3>Garansi</h3><p>Produk original dengan garansi distributor.</p></div>
             <div class="card"><div class="ic">🎧</div><h3>Support</h3><p>Konsultasi &amp; dukungan teknis gratis.</p></div>
         </div>
+    </section>
+
+    <section id="harga" class="pricelist">
+        <h2>Daftar <b>Harga</b></h2>
+        <p class="sub">Paket CCTV lengkap, sudah termasuk kabel &amp; pemasangan</p>
+        <div class="price-tabs">
+            <button class="price-tab active" data-brand="dahua">PAKET DAHUA</button>
+            <button class="price-tab" data-brand="hilook">PAKET HILOOK</button>
+        </div>
+        <div class="price-grid" id="priceList"></div>
+        <p class="price-note">Free Cable 10m per kamera &amp; pemasangan gratis · Melayani seluruh area Bali</p>
     </section>
 
     <section id="kontak" class="contact">
@@ -46,10 +82,12 @@
             <div>📍 <b>Denpasar, Bali</b></div>
             <div>🌏 <b>Seluruh Bali</b></div>
         </div>
-        <a class="btn" href="https://wa.me/62858487498757" target="_blank">💬 Chat WhatsApp Sekarang</a>
+        <a class="btn" href="https://wa.me/6285847498757" target="_blank">💬 Chat WhatsApp Sekarang</a>
     </section>
 
     <footer><p>© <span id="year"></span> <b>2T SECURITY CAMERA</b> — Denpasar, Bali. All Rights Reserved.</p></footer>
+
+    <a class="whatsapp-float" href="https://wa.me/6285847498757" target="_blank" aria-label="Chat WhatsApp">💬</a>
 
     <script src="script.js"></script>
 </body>
