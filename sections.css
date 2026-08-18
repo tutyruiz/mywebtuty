@@ -1,0 +1,99 @@
+/* ============ SECTION ============ */
+section { padding: 70px 6%; }
+
+h2 { text-align: center; font-size: 32px; margin-bottom: 10px; }
+
+h2 b { color: var(--red); }
+
+.sub { text-align: center; color: var(--muted); margin-bottom: 40px; }
+
+.price-link { text-align: center; color: var(--muted); margin: -20px 0 30px; font-size: 17px; }
+
+.price-link a {
+    color: var(--red);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.price-link a:hover { color: var(--red-dark); }
+
+/* ============ KARTU LAYANAN ============ */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    border: 2px solid var(--dark);
+    border-radius: 10px;
+    padding: 26px;
+    text-align: center;
+    transition: all .3s;
+}
+
+.card:hover {
+    background: var(--red);
+    color: #fff;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(227, 6, 19, .3);
+}
+
+.card .ic { font-size: 34px; }
+
+/* ============ HARGA ============ */
+.pricelist { background: var(--white); }
+
+.price-tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
+
+.price-tab {
+    background: var(--white);
+    color: var(--dark);
+    border: 2px solid var(--dark);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1em;
+    transition: .3s;
+}
+
+.price-tab.active { background: var(--red); color: #fff; border-color: var(--red); transform: scale(1.05); }
+
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.price-card {
+    border: 2px solid var(--dark);
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+    transition: .3s;
+}
+
+.price-card:hover { transform: translateY(-6px); background: var(--red); border-color: var(--red); color: #fff; }
+
+.price-card h3 { color: var(--red); font-size: 1.15em; margin-bottom: 4px; }
+
+.price-card:hover h3 { color: #fff; }
+
+.price-card .cam { color: var(--muted); font-size: .9em; }
+
+.price-card:hover .cam { color: #ffe0e0; }
+
+.price-card .price { font-size: 1.6em; font-weight: 800; margin: 10px 0; color: var(--red); }
+
+.price-card:hover .price { color: #fff; }
+
+.price-card .extra { font-size: .82em; color: var(--muted); }
+
+.price-card:hover .extra { color: #ffe0e0; }
+
+.price-note { text-align: center; color: var(--muted); margin-top: 24px; font-size: .95em; }
