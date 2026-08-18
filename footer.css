@@ -1,0 +1,51 @@
+/* ============ KONTAK ============ */
+.contact {
+    background: linear-gradient(135deg, var(--dark), #2a0000);
+    color: #fff;
+    text-align: center;
+}
+
+.contact h2 { color: #fff; }
+
+.contact h2 b, .contact .sub b { color: #ff6b6b; }
+
+.contact .sub { color: #ccc; }
+
+.info { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 20px; }
+
+.info div {
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid var(--red);
+    padding: 12px 24px;
+    border-radius: 40px;
+}
+
+.info b { color: #ff6b6b; }
+
+.contact .btn { margin-top: 26px; }
+
+/* ============ FOOTER ============ */
+footer { background: var(--dark); color: #aaa; text-align: center; padding: 20px; }
+
+footer b { color: var(--red); }
+
+/* ============ WHATSAPP FLOAT ============ */
+.whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 56px;
+    height: 56px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .3);
+    z-index: 200;
+    transition: transform .3s;
+}
+
+.whatsapp-float:hover { transform: scale(1.08); }
