@@ -85,7 +85,7 @@ nav a:hover, nav a.active { color: var(--red); }
 
 .hero h1 { font-size: clamp(30px, 6vw, 54px); color: var(--dark); line-height: 1.15; }
 
-.hero h1 b { color: var(--red); }
+.hero-logo { height: clamp(80px, 14vw, 140px); width: auto; margin-bottom: 6px; }
 
 .hero p { max-width: 640px; margin: 14px auto; color: #444; font-size: 18px; }
 
