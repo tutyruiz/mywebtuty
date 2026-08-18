@@ -39,14 +39,9 @@ nav {
     transition: all .3s ease;
 }
 
-.logo { display: flex; align-items: center; gap: 8px; font-weight: 900; font-size: 18px; color: var(--red); }
+.logo { display: flex; align-items: center; }
 
-.logo span {
-    background: var(--red);
-    color: #fff;
-    padding: 4px 8px;
-    border-radius: 6px;
-}
+.logo img { height: 48px; width: auto; display: block; }
 
 nav ul { display: flex; gap: 22px; list-style: none; }
 
