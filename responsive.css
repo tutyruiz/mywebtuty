@@ -1,0 +1,21 @@
+/* ============ RESPONSIF ============ */
+@media (max-width: 600px) {
+    .hamburger { display: flex; }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(70vw, 280px);
+        background: var(--white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, .15);
+        transition: right .35s ease;
+    }
+
+    nav ul.open { right: 0; }
+}
