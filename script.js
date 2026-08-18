@@ -6,6 +6,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    /* Animasi muncul saat di-scroll */
+    if (window.AOS) AOS.init({ duration: 600, once: true });
+
     /* Tahun otomatis di footer */
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -46,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Sorot menu aktif berdasarkan posisi scroll */
     const sections = document.querySelectorAll('section[id]');
-    const navAnchors = document.querySelectorAll('.nav-links a') || document.querySelectorAll('nav a');
+    const navAnchors = document.querySelectorAll('#navLinks a');
 
     function highlightMenu() {
         const pos = window.scrollY + 100;
